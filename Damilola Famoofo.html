@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portfolio of Damilola Famoofo, a multidisciplinary designer in Manchester.">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Damilola Famoofo, Designer</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Hanken+Grotesk:wght@400;500;600&family=DM+Mono:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap">
+<style>
+/* Layout: a printer's proof sheet. One wide column, work shown as plates with crop marks, type does the talking and the chrome stays quiet. */
+:root {
+  --paper: #EDF0EE;
+  --plate: #DDE3E0;
+  --ink: #141A1F;
+  --muted: #55616A;
+  --rule: #C3CCC8;
+  --accent: #1F3FD1;
+  --on-accent: #FFFFFF;
+  --display: "Bricolage Grotesque", "Arial Narrow", Arial, sans-serif;
+  --body: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --mono: "DM Mono", ui-monospace, Menlo, Consolas, monospace;
+  --serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #12171B; --plate: #1D252B; --ink: #E9EEEC; --muted: #9AA7AE;
+    --rule: #2E3940; --accent: #8FA4FF; --on-accent: #0C1020; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #12171B; --plate: #1D252B; --ink: #E9EEEC; --muted: #9AA7AE;
+  --rule: #2E3940; --accent: #8FA4FF; --on-accent: #0C1020; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.55; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-inline: clamp(16px, 4vw, 40px); padding-block: 0 72px; display: flex; flex-direction: column; gap: 72px; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.mono { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+
+.note { background: var(--accent); color: var(--on-accent); font-size: 14px; padding: 10px clamp(16px, 4vw, 40px); }
+.note b { font-weight: 600; }
+
+header.top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px 24px; padding-block: 22px; border-bottom: 1px solid var(--rule); }
+.top .name { font-family: var(--display); font-weight: 700; font-size: 20px; }
+.top nav { display: flex; flex-wrap: wrap; gap: 20px; }
+.top nav a { text-decoration: none; font-size: 15px; }
+.top nav a:hover { color: var(--accent); }
+
+.hero { display: flex; flex-direction: column; gap: 24px; }
+.hero h1 { font-family: var(--display); font-weight: 700; font-size: clamp(38px, 7.4vw, 92px); line-height: 0.98; letter-spacing: -0.025em; margin: 0; text-wrap: balance; max-width: 15ch; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero p { margin: 0; max-width: 58ch; font-size: 19px; color: var(--muted); }
+.facts { display: flex; flex-wrap: wrap; gap: 8px 28px; }
+
+section { display: flex; flex-direction: column; gap: 28px; }
+.head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 16px; border-bottom: 1px solid var(--rule); padding-bottom: 14px; }
+h2 { font-family: var(--display); font-weight: 600; font-size: clamp(26px, 3.4vw, 38px); letter-spacing: -0.015em; margin: 0; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.filters button { font: 500 14px var(--body); color: var(--ink); background: transparent; border: 1px solid var(--rule); border-radius: 999px; padding: 7px 14px; cursor: pointer; }
+.filters button:hover { border-color: var(--ink); }
+.filters button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 56px 32px; }
+.project { display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.project.lead { grid-column: 1 / -1; }
+.plate {
+  padding: 18px; max-width: 100%;
+  background:
+    linear-gradient(var(--muted), var(--muted)) left 14px top 0 / 1px 9px no-repeat,
+    linear-gradient(var(--muted), var(--muted)) left 0 top 14px / 9px 1px no-repeat,
+    linear-gradient(var(--muted), var(--muted)) right 14px top 0 / 1px 9px no-repeat,
+    linear-gradient(var(--muted), var(--muted)) right 0 top 14px / 9px 1px no-repeat,
+    linear-gradient(var(--muted), var(--muted)) left 14px bottom 0 / 1px 9px no-repeat,
+    linear-gradient(var(--muted), var(--muted)) left 0 bottom 14px / 9px 1px no-repeat,
+    linear-gradient(var(--muted), var(--muted)) right 14px bottom 0 / 1px 9px no-repeat,
+    linear-gradient(var(--muted), var(--muted)) right 0 bottom 14px / 9px 1px no-repeat,
+    var(--plate);
+}
+.plate svg { display: block; width: 100%; height: auto; }
+.fd { font-family: var(--display); }
+.fb { font-family: var(--body); }
+.fm { font-family: var(--mono); }
+.fs { font-family: var(--serif); }
+.ring { transform-box: fill-box; transform-origin: center; }
+.ring.r1 { transform: scale(0.3); opacity: 0.95; }
+.ring.r2 { transform: scale(0.52); opacity: 0.7; }
+.ring.r3 { transform: scale(0.76); opacity: 0.45; }
+.ring.r4 { transform: scale(1); opacity: 0.25; }
+@keyframes echo { from { transform: scale(0.12); opacity: 1; } to { transform: scale(1); opacity: 0; } }
+@media (prefers-reduced-motion: no-preference) {
+  .ring { animation: echo 4s linear infinite; }
+  .ring.r2 { animation-delay: -1s; }
+  .ring.r3 { animation-delay: -2s; }
+  .ring.r4 { animation-delay: -3s; }
+}
+
+.meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; }
+.meta .tag { color: var(--accent); }
+.project h3 { font-family: var(--display); font-weight: 600; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.12; letter-spacing: -0.01em; margin: 0; text-wrap: balance; }
+.lead h3 { font-size: clamp(28px, 4vw, 46px); }
+.project > p { margin: 0; color: var(--muted); max-width: 62ch; }
+details { border-top: 1px solid var(--rule); }
+summary { cursor: pointer; padding-block: 12px; font-weight: 600; font-size: 15px; list-style: none; display: flex; justify-content: space-between; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; font-family: var(--mono); color: var(--accent); }
+details[open] summary::after { content: "\2212"; }
+dl { margin: 0 0 8px; display: grid; grid-template-columns: 7.5em minmax(0, 1fr); gap: 10px 16px; font-size: 15.5px; }
+dt { font-family: var(--mono); font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+dd { margin: 0; }
+
+.about { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 32px 56px; }
+.about p { margin: 0 0 14px; max-width: 60ch; font-size: 18px; }
+.caps { display: flex; flex-direction: column; gap: 18px; }
+.caps div { display: flex; flex-direction: column; gap: 4px; border-top: 1px solid var(--rule); padding-top: 12px; }
+.caps span:last-child { font-size: 15.5px; }
+
+.contact { gap: 18px; }
+.contact .big { font-family: var(--display); font-weight: 700; font-size: clamp(24px, 5vw, 56px); letter-spacing: -0.02em; line-height: 1.05; overflow-wrap: anywhere; user-select: all; }
+.row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
+.copy { font: 600 14px var(--body); background: var(--accent); color: var(--on-accent); border: 0; border-radius: 999px; padding: 9px 18px; cursor: pointer; }
+footer { border-top: 1px solid var(--rule); padding-top: 18px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; }
+
+@media (max-width: 760px) {
+  .grid, .about { grid-template-columns: minmax(0, 1fr); }
+  .wrap { gap: 56px; }
+  dl { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  dd { margin-bottom: 10px; }
+}
+</style>
+</head>
+<body>
+
+
+<div class="wrap">
+  <header class="top">
+    <span class="name">Damilola Famoofo</span>
+    <nav aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Identity, interface, print and <em>motion</em>, designed as one system.</h1>
+    <p>Damilola Famoofo is a multidisciplinary designer in Manchester, working across brand identity, digital products, editorial design and illustration. Each project starts with one clear idea and grows into a system that holds together from a ticket stub to a phone screen.</p>
+    <div class="facts mono">
+      <span>Based in Manchester, UK</span>
+      <span>Open to freelance and contract work</span>
+      <span>5 years in practice</span>
+    </div>
+  </div>
+
+  <section id="work">
+    <div class="head">
+      <h2>Selected work</h2>
+      <div class="filters" role="group" aria-label="Filter by discipline">
+        <button type="button" id="f-all" data-f="all" aria-pressed="true">All</button>
+        <button type="button" id="f-brand" data-f="brand" aria-pressed="false">Branding</button>
+        <button type="button" id="f-ui" data-f="ui" aria-pressed="false">UI/UX</button>
+        <button type="button" id="f-print" data-f="print" aria-pressed="false">Print</button>
+        <button type="button" id="f-motion" data-f="motion" aria-pressed="false">Illustration and motion</button>
+      </div>
+    </div>
+
+    <div class="grid" id="grid">
+
+      <article class="project lead" data-d="brand" id="meridian">
+        <div class="plate">
+          <svg viewBox="0 0 1600 900" role="img" aria-label="Meridian Sleeper identity: moon and rails logo, route diagram, colour palette and boarding pass">
+            <defs>
+              <pattern id="bars" width="22" height="80" patternUnits="userSpaceOnUse">
+                <rect x="0" width="4" height="80" fill="#0E1B3D"/><rect x="7" width="2" height="80" fill="#0E1B3D"/><rect x="12" width="6" height="80" fill="#0E1B3D"/><rect x="20" width="1" height="80" fill="#0E1B3D"/>
+              </pattern>
+            </defs>
+            <rect width="1600" height="900" fill="#0E1B3D"/>
+            <g fill="#F5F1E6" opacity="0.5"><circle cx="620" cy="120" r="3"/><circle cx="860" cy="210" r="2"/><circle cx="480" cy="170" r="2"/><circle cx="900" cy="90" r="3"/><circle cx="760" cy="560" r="2"/><circle cx="90" cy="150" r="2"/></g>
+            <circle cx="230" cy="300" r="100" fill="#F4C95D"/>
+            <g fill="#0E1B3D"><rect x="120" y="318" width="220" height="12"/><rect x="120" y="346" width="220" height="18"/><rect x="120" y="380" width="220" height="26"/></g>
+            <text class="fd" x="370" y="318" font-size="118" font-weight="700" fill="#F5F1E6" letter-spacing="-3">Meridian</text>
+            <text class="fm" x="376" y="372" font-size="30" fill="#F4C95D" letter-spacing="14">SLEEPER</text>
+            <text class="fb" x="120" y="490" font-size="28" fill="#AEB9D6">Fall asleep in Lisbon. Wake up in Madrid.</text>
+            <text class="fm" x="120" y="610" font-size="14" fill="#7F8DB8" letter-spacing="3">ROUTE 01 · IBERIA NIGHT</text>
+            <line x1="130" y1="660" x2="760" y2="660" stroke="#F4C95D" stroke-width="4"/>
+            <g fill="#0E1B3D" stroke="#F4C95D" stroke-width="4"><circle cx="130" cy="660" r="10"/><circle cx="445" cy="660" r="10"/><circle cx="760" cy="660" r="10"/></g>
+            <g class="fd" font-size="22" font-weight="600" fill="#F5F1E6"><text x="120" y="705">Lisbon</text><text x="445" y="705" text-anchor="middle">Badajoz</text><text x="770" y="705" text-anchor="end">Madrid</text></g>
+            <g class="fm" font-size="15" fill="#AEB9D6"><text x="120" y="730">22:10</text><text x="445" y="730" text-anchor="middle">01:40</text><text x="770" y="730" text-anchor="end">07:05</text></g>
+            <rect x="120" y="785" width="70" height="40" fill="#1D2F66" stroke="#33457F"/><rect x="200" y="785" width="70" height="40" fill="#F4C95D"/><rect x="280" y="785" width="70" height="40" fill="#F5F1E6"/><rect x="360" y="785" width="70" height="40" fill="#E4572E"/>
+            <g class="fm" font-size="12" fill="#7F8DB8"><text x="120" y="848">#1D2F66</text><text x="200" y="848">#F4C95D</text><text x="280" y="848">#F5F1E6</text><text x="360" y="848">#E4572E</text></g>
+            <g transform="rotate(5 1220 450)">
+              <rect x="1010" y="130" width="420" height="640" rx="20" fill="#F5F1E6"/>
+              <rect x="1010" y="130" width="420" height="80" rx="20" fill="#F4C95D"/><rect x="1010" y="170" width="420" height="40" fill="#F4C95D"/>
+              <text class="fm" x="1040" y="180" font-size="16" fill="#0E1B3D" letter-spacing="5">BOARDING PASS</text>
+              <text class="fm" x="1400" y="180" font-size="16" fill="#0E1B3D" text-anchor="end">No. 0412</text>
+              <text class="fd" x="1040" y="330" font-size="96" font-weight="700" fill="#0E1B3D">LIS</text>
+              <line x1="1200" y1="298" x2="1244" y2="298" stroke="#E4572E" stroke-width="5"/><polygon points="1244,286 1262,298 1244,310" fill="#E4572E"/>
+              <text class="fd" x="1400" y="330" font-size="96" font-weight="700" fill="#0E1B3D" text-anchor="end">MAD</text>
+              <text class="fb" x="1040" y="364" font-size="15" fill="#55607F">Lisbon Santa Apolónia</text>
+              <text class="fb" x="1400" y="364" font-size="15" fill="#55607F" text-anchor="end">Madrid Chamartín</text>
+              <g class="fm" font-size="12" fill="#7F8DB8" letter-spacing="2"><text x="1040" y="430">DEPARTS</text><text x="1240" y="430">ARRIVES</text><text x="1040" y="520">COACH</text><text x="1240" y="520">BERTH</text></g>
+              <g class="fd" font-size="30" font-weight="600" fill="#0E1B3D"><text x="1040" y="466">22:10</text><text x="1240" y="466">07:05</text><text x="1040" y="556">07</text><text x="1240" y="556">12 Upper</text></g>
+              <line x1="1010" y1="600" x2="1430" y2="600" stroke="#B9B3A2" stroke-width="2" stroke-dasharray="8 8"/>
+              <circle cx="1010" cy="600" r="14" fill="#0E1B3D"/><circle cx="1430" cy="600" r="14" fill="#0E1B3D"/>
+              <rect x="1040" y="640" width="360" height="80" fill="url(#bars)"/>
+              <text class="fm" x="1040" y="748" font-size="12" fill="#55607F" letter-spacing="2">MS 0412 LISMAD 07 12U</text>
+            </g>
+          </svg>
+        </div>
+        <div class="meta mono"><span class="tag">Brand identity</span><span>Concept project · 2026</span></div>
+        <h3>Meridian Sleeper, an identity for a night train</h3>
+        <p>A concept identity for an overnight rail service between Lisbon and Madrid, built around a setting moon that turns into the rails.</p>
+        <details open>
+          <summary>Case study</summary>
+          <dl>
+            <dt>Brief</dt><dd>Night trains compete with budget flights on romance, not speed. The self set brief was an identity that sells the journey itself and works from a ticket stub up to a carriage side.</dd>
+            <dt>Approach</dt><dd>The mark is a low moon sliced by three rails that thicken toward the ground, so it reads as both a horizon and a track. A warm grotesque wordmark sits beside monospaced timetable type. Navy and gold carry the night, with coral reserved for wayfinding and alerts.</dd>
+            <dt>Outcome</dt><dd>Logo, colour and type system, route diagram language and a boarding pass. Next steps would be livery and station signage.</dd>
+            <dt>Role</dt><dd>Concept, identity design and art direction.</dd>
+            <dt>Tools</dt><dd>Vector artwork built in SVG.</dd>
+          </dl>
+        </details>
+      </article>
+
+      <article class="project" data-d="ui" id="tend">
+        <div class="plate">
+          <svg viewBox="0 0 800 600" role="img" aria-label="Tend plant care app: a home screen listing plants to water and a plant detail screen">
+            <rect width="800" height="600" fill="#DCEBDD"/>
+            <rect x="130" y="65" width="230" height="470" rx="32" fill="#FFFFFF"/>
+            <text class="fm" x="150" y="110" font-size="11" fill="#6B7F70" letter-spacing="1">TUESDAY 14 MAY</text>
+            <text class="fd" x="150" y="142" font-size="23" font-weight="600" fill="#1F3D2B">3 plants need</text>
+            <text class="fd" x="150" y="170" font-size="23" font-weight="600" fill="#1F3D2B">water today</text>
+            <g fill="#EEF5EE"><rect x="150" y="195" width="190" height="78" rx="14"/><rect x="150" y="285" width="190" height="78" rx="14"/><rect x="150" y="375" width="190" height="78" rx="14"/></g>
+            <circle cx="180" cy="234" r="20" fill="#7FC08A"/><circle cx="180" cy="324" r="20" fill="#F2B84B"/><circle cx="180" cy="414" r="20" fill="#D9774B"/>
+            <g class="fd" font-size="15" font-weight="600" fill="#1F3D2B"><text x="212" y="230">Monstera</text><text x="212" y="320">Fiddle leaf fig</text><text x="212" y="410">Basil</text></g>
+            <g class="fb" font-size="12" fill="#6B7F70"><text x="212" y="249">Living room</text><text x="212" y="339">Hallway</text><text x="212" y="429">Kitchen sill</text></g>
+            <circle cx="205" cy="500" r="5" fill="#C5D6C7"/><circle cx="245" cy="500" r="5" fill="#1F3D2B"/><circle cx="285" cy="500" r="5" fill="#C5D6C7"/>
+
+            <rect x="440" y="65" width="230" height="470" rx="32" fill="#FFFFFF"/>
+            <rect x="452" y="77" width="206" height="190" rx="22" fill="#1F3D2B"/>
+            <ellipse cx="555" cy="165" rx="16" ry="42" fill="#7FC08A" transform="rotate(-36 555 212)"/>
+            <ellipse cx="555" cy="165" rx="16" ry="42" fill="#7FC08A" transform="rotate(36 555 212)"/>
+            <ellipse cx="555" cy="160" rx="17" ry="46" fill="#A5D8A0"/>
+            <polygon points="523,212 587,212 579,252 531,252" fill="#D9774B"/>
+            <text class="fd" x="458" y="302" font-size="24" font-weight="700" fill="#1F3D2B">Monstera</text>
+            <text class="fb" x="458" y="322" font-size="12" fill="#6B7F70">Living room, east window</text>
+            <g fill="#EEF5EE"><rect x="458" y="338" width="58" height="60" rx="12"/><rect x="526" y="338" width="58" height="60" rx="12"/><rect x="594" y="338" width="58" height="60" rx="12"/></g>
+            <g class="fm" font-size="9" fill="#6B7F70" letter-spacing="1"><text x="466" y="359">WATER</text><text x="534" y="359">LIGHT</text><text x="602" y="359">FEED</text></g>
+            <g class="fd" font-size="13" font-weight="600" fill="#1F3D2B"><text x="466" y="382">6 days</text><text x="534" y="382">Medium</text><text x="602" y="382">3 wks</text></g>
+            <text class="fb" x="458" y="424" font-size="12" fill="#6B7F70">Watering, last 7 weeks</text>
+            <g fill="#7FC08A"><rect x="458" y="452" width="18" height="24" rx="4"/><rect x="486" y="444" width="18" height="32" rx="4"/><rect x="514" y="456" width="18" height="20" rx="4"/><rect x="542" y="440" width="18" height="36" rx="4"/><rect x="570" y="448" width="18" height="28" rx="4"/><rect x="598" y="446" width="18" height="30" rx="4"/></g>
+            <rect x="626" y="436" width="18" height="40" rx="4" fill="#1F3D2B"/>
+            <rect x="458" y="488" width="194" height="34" rx="17" fill="#1F3D2B"/>
+            <text class="fb" x="555" y="510" font-size="13" font-weight="600" fill="#FFFFFF" text-anchor="middle">Mark as watered</text>
+          </svg>
+        </div>
+        <div class="meta mono"><span class="tag">UI/UX</span><span>Concept project · 2026</span></div>
+        <h3>Tend, a plant care app that asks for one tap a day</h3>
+        <p>A mobile app concept that turns plant care into a single daily list instead of a wall of reminders.</p>
+        <details>
+          <summary>Case study</summary>
+          <dl>
+            <dt>Brief</dt><dd>Plant apps tend to fail by nagging: every plant sends its own notification and people mute them all. The brief was one calm daily moment that still keeps plants alive.</dd>
+            <dt>Approach</dt><dd>The home screen answers one question, which plants need water today. Each plant is a large touch target with its room as the secondary label, since people find plants by location. The detail screen leads with three facts and one primary action.</dd>
+            <dt>Outcome</dt><dd>Two key screens and a component set: list card, stat tile, history chart and primary button. Not yet tested with users, which would be the next step.</dd>
+            <dt>Role</dt><dd>Product concept, interface design.</dd>
+            <dt>Tools</dt><dd>Interface drawn in SVG.</dd>
+          </dl>
+        </details>
+      </article>
+
+      <article class="project" data-d="print" id="slow-signal">
+        <div class="plate">
+          <svg viewBox="0 0 800 600" role="img" aria-label="Slow Signal magazine: red cover with concentric arcs and an opening spread">
+            <defs>
+              <clipPath id="cv"><rect x="68" y="78" width="280" height="410"/></clipPath>
+              <pattern id="lines" width="10" height="9" patternUnits="userSpaceOnUse"><rect width="10" height="3" fill="#B9B3A6"/></pattern>
+            </defs>
+            <rect width="800" height="600" fill="#C9CED6"/>
+            <rect x="78" y="88" width="280" height="410" fill="#A9AFB9"/>
+            <rect x="68" y="78" width="280" height="410" fill="#E5432B"/>
+            <g clip-path="url(#cv)" fill="none" stroke="#FFF4E6" stroke-width="6"><circle cx="208" cy="488" r="60"/><circle cx="208" cy="488" r="100"/><circle cx="208" cy="488" r="140"/><circle cx="208" cy="488" r="180"/></g>
+            <text class="fm" x="92" y="112" font-size="12" fill="#FFF4E6" letter-spacing="2">ISSUE 04 · AUTUMN</text>
+            <text class="fs" x="90" y="178" font-size="76" fill="#FFF4E6">Slow</text>
+            <text class="fs" x="90" y="244" font-size="76" fill="#FFF4E6">Signal</text>
+            <text class="fb" x="92" y="276" font-size="12" fill="#FFF4E6">Radio, sound and the places they reach</text>
+
+            <rect x="398" y="158" width="360" height="260" fill="#A9AFB9"/>
+            <rect x="390" y="150" width="360" height="260" fill="#FAF7F0"/>
+            <line x1="570" y1="150" x2="570" y2="410" stroke="#D9D3C6" stroke-width="1.5"/>
+            <text class="fs" x="406" y="250" font-size="112" fill="#E5432B">04</text>
+            <g class="fs" font-size="21" fill="#1B1B1B"><text x="408" y="290">The last pirate</text><text x="408" y="314">station on the</text><text x="408" y="338">estuary</text></g>
+            <text class="fm" x="408" y="368" font-size="8.5" fill="#6B665C" letter-spacing="1.5">WORDS AND FIELD RECORDINGS</text>
+            <rect x="408" y="382" width="140" height="15" fill="url(#lines)"/>
+            <rect x="588" y="168" width="144" height="96" fill="#E5432B"/>
+            <circle cx="660" cy="216" r="30" fill="#1B1B1B"/><circle cx="660" cy="216" r="42" fill="none" stroke="#1B1B1B" stroke-width="2"/>
+            <rect x="588" y="282" width="66" height="114" fill="url(#lines)"/><rect x="666" y="282" width="66" height="114" fill="url(#lines)"/>
+            <text class="fm" x="390" y="450" font-size="11" fill="#3A404A" letter-spacing="1.5">210 × 270 MM · 96 PAGES · TWO COLOUR RISO</text>
+            <text class="fm" x="390" y="470" font-size="11" fill="#3A404A" letter-spacing="1.5">COVER AND OPENING SPREAD</text>
+          </svg>
+        </div>
+        <div class="meta mono"><span class="tag">Print and editorial</span><span>Concept project · 2026</span></div>
+        <h3>Slow Signal, a quarterly about radio and sound</h3>
+        <p>Cover and opening spread for a 96 page independent magazine, designed for two colour risograph printing.</p>
+        <details>
+          <summary>Case study</summary>
+          <dl>
+            <dt>Brief</dt><dd>An independent title about sound has to make a silent medium feel audible, on a small press budget that allows only two inks.</dd>
+            <dt>Approach</dt><dd>Concentric arcs act as the masthead device and change position every issue, like a signal moving across the dial. One red and one black keep print costs down and give the series a spine colour. A high contrast serif for headlines sits on a strict two column grid.</dd>
+            <dt>Outcome</dt><dd>Cover system, feature opener template and a grid that scales from essays to photo stories.</dd>
+            <dt>Role</dt><dd>Editorial design, typography and cover art.</dd>
+            <dt>Tools</dt><dd>Layout drawn in SVG, set up for print production.</dd>
+          </dl>
+        </details>
+      </article>
+
+      <article class="project" data-d="motion" id="forecast">
+        <div class="plate">
+          <svg viewBox="0 0 800 600" role="img" aria-label="Forecast illustration series: four geometric weather scenes for clear, rain, night and wind">
+            <rect width="800" height="600" fill="#F3F1EC"/>
+            <rect x="20" y="20" width="370" height="270" fill="#F6B93B"/>
+            <circle cx="205" cy="165" r="80" fill="#F25C3A"/><circle cx="258" cy="122" r="44" fill="#FFF1C9"/>
+            <text class="fm" x="38" y="48" font-size="12" fill="#7A3B12" letter-spacing="2">01 CLEAR</text>
+
+            <rect x="410" y="20" width="370" height="270" fill="#23395B"/>
+            <g fill="#E8EEF7"><circle cx="560" cy="142" r="40"/><circle cx="610" cy="122" r="52"/><circle cx="655" cy="146" r="36"/><rect x="525" y="140" width="165" height="42" rx="21"/></g>
+            <g stroke="#6FB1FF" stroke-width="8" stroke-linecap="round"><line x1="555" y1="205" x2="541" y2="238"/><line x1="600" y1="205" x2="586" y2="238"/><line x1="645" y1="205" x2="631" y2="238"/><line x1="578" y1="250" x2="569" y2="271"/><line x1="623" y1="250" x2="614" y2="271"/></g>
+            <text class="fm" x="428" y="48" font-size="12" fill="#A9C4EC" letter-spacing="2">02 RAIN</text>
+
+            <rect x="20" y="310" width="370" height="270" fill="#151A33"/>
+            <circle cx="205" cy="448" r="78" fill="#F4E9C1"/><circle cx="240" cy="422" r="68" fill="#151A33"/>
+            <g fill="#F4E9C1"><circle cx="90" cy="380" r="3"/><circle cx="320" cy="368" r="4"/><circle cx="300" cy="530" r="3"/><circle cx="110" cy="536" r="2.5"/><circle cx="335" cy="455" r="2.5"/></g>
+            <text class="fm" x="38" y="338" font-size="12" fill="#8E96C2" letter-spacing="2">03 NIGHT</text>
+
+            <rect x="410" y="310" width="370" height="270" fill="#BFD8D2"/>
+            <rect x="450" y="400" width="220" height="18" rx="9" fill="#FFFFFF"/><rect x="500" y="436" width="240" height="18" rx="9" fill="#5B8E86"/><rect x="440" y="472" width="180" height="18" rx="9" fill="#FFFFFF"/><rect x="520" y="508" width="160" height="18" rx="9" fill="#5B8E86"/>
+            <circle cx="700" cy="378" r="26" fill="#F25C3A"/>
+            <text class="fm" x="428" y="338" font-size="12" fill="#3E6660" letter-spacing="2">04 WIND</text>
+          </svg>
+        </div>
+        <div class="meta mono"><span class="tag">Illustration</span><span>Concept project · 2026</span></div>
+        <h3>Forecast, four weathers from circles and bars</h3>
+        <p>A geometric illustration series for a weather service, drawn with two shapes and a flat palette.</p>
+        <details>
+          <summary>Case study</summary>
+          <dl>
+            <dt>Brief</dt><dd>Weather icons are usually tiny and literal. The brief was a set that works as a large poster and as a small app tile without redrawing.</dd>
+            <dt>Approach</dt><dd>Every scene uses only circles and rounded bars. The moon is a circle with a bite taken by the sky colour, rain is the wind bar tilted, and the coral sun returns in the wind tile to tie the set together.</dd>
+            <dt>Outcome</dt><dd>Four scenes on a shared grid, with rules that extend to snow, fog and storm.</dd>
+            <dt>Role</dt><dd>Illustration and system design.</dd>
+            <dt>Tools</dt><dd>Vector illustration in SVG.</dd>
+          </dl>
+        </details>
+      </article>
+
+      <article class="project" data-d="motion" id="echo-days">
+        <div class="plate">
+          <svg viewBox="0 0 800 600" role="img" aria-label="Echo Days festival ident: coloured rings expanding behind the wordmark">
+            <rect width="800" height="600" fill="#1B1035"/>
+            <g fill="none" stroke-width="10">
+              <circle class="ring r1" cx="400" cy="290" r="330" stroke="#FF5D73"/>
+              <circle class="ring r2" cx="400" cy="290" r="330" stroke="#FFC857"/>
+              <circle class="ring r3" cx="400" cy="290" r="330" stroke="#5BC0EB"/>
+              <circle class="ring r4" cx="400" cy="290" r="330" stroke="#FF5D73"/>
+            </g>
+            <text class="fd" x="400" y="318" font-size="104" font-weight="700" fill="#FFF6E5" text-anchor="middle" letter-spacing="-3">Echo Days</text>
+            <text class="fm" x="400" y="368" font-size="16" fill="#FFC857" text-anchor="middle" letter-spacing="3">THREE NIGHTS OF LIVE SOUND</text>
+            <text class="fm" x="30" y="572" font-size="12" fill="#9C8FC4" letter-spacing="2">IDENT · 4 SECOND LOOP</text>
+            <text class="fm" x="770" y="572" font-size="12" fill="#9C8FC4" letter-spacing="2" text-anchor="end">14 TO 16 AUGUST</text>
+          </svg>
+        </div>
+        <div class="meta mono"><span class="tag">Motion</span><span>Concept project · 2026</span></div>
+        <h3>Echo Days, a looping ident for a music festival</h3>
+        <p>A four second loop for screens and social posts. The animation above is the piece itself, playing live.</p>
+        <details>
+          <summary>Case study</summary>
+          <dl>
+            <dt>Brief</dt><dd>A festival ident has to loop for hours on stage screens without tiring the eye, and still read in two seconds on a phone.</dd>
+            <dt>Approach</dt><dd>Sound becomes rings that leave the wordmark at a steady tempo of one per second, in three colours that cycle. The type never moves, so the name is legible on every frame and the loop has no visible start or end.</dd>
+            <dt>Outcome</dt><dd>A seamless loop that scales to any aspect ratio, and a motion rule the rest of the campaign can reuse.</dd>
+            <dt>Role</dt><dd>Motion design and art direction.</dd>
+            <dt>Tools</dt><dd>SVG animated with CSS keyframes.</dd>
+          </dl>
+        </details>
+      </article>
+
+      <article class="project" data-d="brand" id="kiln">
+        <div class="plate">
+          <svg viewBox="0 0 800 600" role="img" aria-label="Kiln No. 4 ceramics identity: circular stamp, product swing tag and glaze palette">
+            <defs><path id="arc" d="M 116 270 a 114 114 0 1 1 228 0 a 114 114 0 1 1 -228 0"/></defs>
+            <rect width="800" height="600" fill="#B85C3A"/>
+            <circle cx="230" cy="270" r="140" fill="none" stroke="#F6EAD8" stroke-width="3"/>
+            <circle cx="230" cy="270" r="100" fill="none" stroke="#F6EAD8" stroke-width="1.5"/>
+            <text class="fm" font-size="14" fill="#F6EAD8" letter-spacing="5"><textPath href="#arc">HAND THROWN STONEWARE · SMALL BATCHES · FIRED SLOW ·</textPath></text>
+            <text class="fs" x="230" y="284" font-size="78" fill="#F6EAD8" text-anchor="middle">Kiln</text>
+            <text class="fs" x="230" y="324" font-size="34" font-style="italic" fill="#F6EAD8" text-anchor="middle">No. 4</text>
+            <circle cx="120" cy="500" r="18" fill="#E8DCC6"/><circle cx="170" cy="500" r="18" fill="#9DAE93"/><circle cx="220" cy="500" r="18" fill="#4C5560"/><circle cx="270" cy="500" r="18" fill="#6E2F1B" stroke="#F6EAD8" stroke-width="2"/>
+            <text class="fm" x="304" y="505" font-size="12" fill="#F6EAD8" letter-spacing="3">GLAZES</text>
+            <g transform="rotate(7 580 250)">
+              <line x1="580" y1="20" x2="580" y2="122" stroke="#F6EAD8" stroke-width="2"/>
+              <rect x="470" y="100" width="220" height="340" rx="10" fill="#F6EAD8"/>
+              <circle cx="580" cy="128" r="9" fill="#B85C3A"/>
+              <text class="fm" x="494" y="184" font-size="11" fill="#B85C3A" letter-spacing="3">KILN NO. 4</text>
+              <text class="fs" x="494" y="238" font-size="40" fill="#2B211C">Mug,</text>
+              <text class="fs" x="494" y="278" font-size="40" fill="#2B211C">speckled oat</text>
+              <line x1="494" y1="302" x2="666" y2="302" stroke="#D8C6AE" stroke-width="1.5"/>
+              <g class="fm" font-size="12" fill="#7A6654" letter-spacing="2"><text x="494" y="330">GLAZE</text><text x="494" y="354">FIRED</text><text x="494" y="378">BATCH</text></g>
+              <g class="fm" font-size="12" fill="#2B211C" text-anchor="end"><text x="666" y="330">27</text><text x="666" y="354">1240°C</text><text x="666" y="378">12 OF 40</text></g>
+              <text class="fs" x="494" y="422" font-size="34" fill="#B85C3A">£28</text>
+            </g>
+          </svg>
+        </div>
+        <div class="meta mono"><span class="tag">Brand identity</span><span>Concept project · 2026</span></div>
+        <h3>Kiln No. 4, a maker's mark for a ceramics studio</h3>
+        <p>A small studio identity where the logo is a stamp that can be pressed into clay as well as printed.</p>
+        <details>
+          <summary>Case study</summary>
+          <dl>
+            <dt>Brief</dt><dd>A one person pottery sells at markets and online. The identity has to feel handmade without looking amateur, and cost almost nothing to apply.</dd>
+            <dt>Approach</dt><dd>The mark is a circular stamp sized to fit the base of a mug. Swing tags carry the facts buyers ask about, glaze number, firing temperature and batch size, set like a lab label. The palette comes from the glazes themselves.</dd>
+            <dt>Outcome</dt><dd>Stamp mark, swing tag system and glaze palette, all printable in one colour on kraft or cream stock.</dd>
+            <dt>Role</dt><dd>Identity design and packaging.</dd>
+            <dt>Tools</dt><dd>Vector artwork built in SVG.</dd>
+          </dl>
+        </details>
+      </article>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="head"><h2>About</h2></div>
+    <div class="about">
+      <div>
+        <p>I'm Damilola, a designer based in Manchester. I like projects where one simple idea can carry everything, from the logo to the smallest label. I work out the system before the surface, then keep cutting until only the useful parts are left.</p>
+        <p>The work here is self initiated, which is where I test ideas that rarely survive a deadline. I'm open to freelance and contract projects in branding, interface and editorial design.</p>
+      </div>
+      <div class="caps">
+        <div><span class="mono">Brand</span><span>Identity systems, logo design, guidelines, packaging</span></div>
+        <div><span class="mono">Digital</span><span>UI/UX for web and mobile, design systems, prototyping</span></div>
+        <div><span class="mono">Print</span><span>Editorial layout, covers, posters, production files</span></div>
+        <div><span class="mono">Image and motion</span><span>Illustration, animated idents, motion systems</span></div>
+        <div><span class="mono">Tools</span><span>Figma, Adobe Illustrator, Photoshop, InDesign, After Effects, HTML, CSS and SVG</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="head"><h2>Contact</h2></div>
+    <div class="big" id="email">damifamoofo@gmail.com</div>
+    <div class="row">
+      <button type="button" class="copy" id="copy">Copy email</button>
+      <span class="mono">Manchester, UK</span>
+    </div>
+  </section>
+
+  <footer class="mono">
+    <span>© 2026 Damilola Famoofo</span>
+    <span>All projects shown are self initiated concepts</span>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var buttons = document.querySelectorAll(".filters button");
+  var cards = document.querySelectorAll(".project");
+  buttons.forEach(function (b) {
+    b.addEventListener("click", function () {
+      var f = b.dataset.f;
+      buttons.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      cards.forEach(function (c) { c.hidden = !(f === "all" || c.dataset.d === f); });
+    });
+  });
+  var copy = document.getElementById("copy");
+  var email = document.getElementById("email");
+  copy.addEventListener("click", function () {
+    var done = function () { copy.textContent = "Copied"; setTimeout(function () { copy.textContent = "Copy email"; }, 1600); };
+    var fallback = function () {
+      var r = document.createRange(); r.selectNodeContents(email);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      copy.textContent = "Selected, now copy";
+    };
+    try { navigator.clipboard.writeText(email.textContent.trim()).then(done, fallback); } catch (e) { fallback(); }
+  });
+})();
+</script>
+
+</body>
+</html>
